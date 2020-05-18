@@ -1,5 +1,5 @@
 Source: soci
-Version: 4.0.0-1
+Version: 4.0.0-2
 Homepage: https://github.com/SOCI/soci
 Description: SOCI database access library
 
@@ -17,3 +17,6 @@ Description: Build postgresql backend
 
 Feature: odbc
 Description: Build odbc backend
+
+Feature: oracle
+Description: Build oracle backend

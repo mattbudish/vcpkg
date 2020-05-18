@@ -4,6 +4,7 @@ vcpkg_from_github(
     REF 3742c894ab8ba5fd51b6a156980e8b34db0f3063 #version 4.0.0 commit on 2019.11.10
     SHA512 27950230d104bdc0ab8e439a69c59d1b157df373adc863a22c8332b8bb896c2a6e3028f8343bb36b42bf9ab2a2312375e20cbdeca7f497f0bb1424a4733f0c9c
     HEAD_REF master
+    PATCHES soci-new-oracle.patch
 )
 
 string(COMPARE EQUAL "${VCPKG_LIBRARY_LINKAGE}" "dynamic" SOCI_DYNAMIC)
@@ -38,7 +39,6 @@ vcpkg_configure_cmake(
         ${_COMPONENT_FLAGS}
 
         -DWITH_MYSQL=OFF
-        -DWITH_ORACLE=OFF
         -DWITH_FIREBIRD=OFF
         -DWITH_DB2=OFF
 )
